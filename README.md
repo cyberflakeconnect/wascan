@@ -41,3 +41,19 @@ Features
 - _PHPInfo_
 - _Robots.txt_
 - _XST_
+
+**Bruteforce**
+- _Admin Panel_
+- _Common Backdoor_
+- _Common Backup Dir_
+- _Common Backup File_
+- _Common Dir_
+- _Common File_
+- _Hidden Parameters_
+
+**Disclosure**
+- _Credit Cards_
+- _Emails_
+- _Private IP_
+- _Errors_ -> (__fatal errors__,...)
+- _SSN_
