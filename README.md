@@ -58,6 +58,19 @@ Features
 - _Errors_ -> (__fatal errors__,...)
 - _SSN_
 
+Installation
+--
+```
+$ git clone https://github.com/m4ll0k/WAScan.git wascan
+$ cd wascan 
+$ pip install BeautifulSoup
+$ python wascan.py
+```
+
 Usage
 --
-
+__Fingerprint:__
+```
+$ python wascan.py --url http://xxxxx.com/ --scan 0
+```
+![screen_2](https://raw.githubusercontent.com/m4ll0k/WAScan/master/screen/screen_2.png)
