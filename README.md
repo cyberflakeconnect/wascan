@@ -21,8 +21,19 @@ Features
 - _Bash Commands Injection_
 - _Blind SQL Injection_
 - _Buffer Overflow_
-- _CRLF_
-- _Headers SQL Injection_
+- _Carriage Return Line Feed_
+- _SQL Injection in Headers_
+- _XSS in Headers_
+- _HTML Injection_
+- _LDAP Injection_
+- _Local File Inclusion_
+- _OS Commanding_
+- _PHP Code Injection_
+- _SQL Injection_
+- _Server Side Injection_
+- _XPath Injection_
+- _Cross Site Scripting_
+- _XML External Entity_
 
 **Audit**
 - _Apache Status Page_
