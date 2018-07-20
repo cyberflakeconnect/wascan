@@ -113,4 +113,10 @@ $ python wascan.py --url http://xxxxx.com/test.php --brute
 
 Advanced Usage
 --
-d
+```
+$ python wascan.py --url http://xxxxx.com/test.php --scan 5 --auth "admin:1234"
+$ python wascan.py --url http://xxxxx.com/test.php --scan 5 --data "id=1" --method POST
+$ python wascan.py --url http://xxxxx.com/test.php --scan 5 --auth "admin:1234" --proxy xxx.xxx.xxx.xxx 
+$ python wascan.py --url http://xxxxx.com/test.php --scan 5 --auth "admin:1234" --proxy xxx.xxx.xxx.xxx --proxy-auth "root:4321"
+$ python wascan.py --url http://xxxxx.com/test.php --scan 5 --auth "admin:1234" --proxy xxx.xxx.xxx.xxx --proxy-auth "root:4321 --ragent -v
+```
