@@ -16,3 +16,17 @@ Features
 - _Operating Systems (OS)_ -> __7__
 - _Server_ -> __ALL__ 
 - _Web App Firewall (WAF)_ -> __50+__
+
+**Attacks**
+- _Bash Commands Injection_
+- _Blind SQL Injection_
+- _Buffer Overflow_
+- _CRLF_
+- _Headers SQL Injection_
+
+**Audit**
+- _Apache Status Page_
+- _Open Redirect_
+- _PHPInfo_
+- _Robots.txt_
+- _XST_
