@@ -74,3 +74,9 @@ __Fingerprint:__
 $ python wascan.py --url http://xxxxx.com/ --scan 0
 ```
 ![screen_2](https://raw.githubusercontent.com/m4ll0k/WAScan/master/screen/screen_2.png)
+
+__Attacks:__
+```
+$ python wascan.py --url http://xxxxx.com/index.php?id=1 --scan 1
+```
+![screen_3](https://raw.githubusercontent.com/m4ll0k/WAScan/master/screen/screen_3.png)
