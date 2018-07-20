@@ -110,3 +110,7 @@ __Bruteforce Hidden Parameters:__
 $ python wascan.py --url http://xxxxx.com/test.php --brute
 ```
 ![screen_5](https://raw.githubusercontent.com/m4ll0k/WAScan/master/screen/screen_8.png)
+
+Advanced Usage
+--
+d
