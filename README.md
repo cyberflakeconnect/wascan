@@ -80,3 +80,33 @@ __Attacks:__
 $ python wascan.py --url http://xxxxx.com/index.php?id=1 --scan 1
 ```
 ![screen_3](https://raw.githubusercontent.com/m4ll0k/WAScan/master/screen/screen_3.png)
+
+__Audit:__
+```
+$ python wascan.py --url http://xxxxx.com/ --scan 2
+```
+![screen_4](https://raw.githubusercontent.com/m4ll0k/WAScan/master/screen/screen_4.png)
+
+__Bruteforce:__
+```
+$ python wascan.py --url http://xxxxx.com/ --scan 3
+```
+![screen_5](https://raw.githubusercontent.com/m4ll0k/WAScan/master/screen/screen_5.png)
+
+__Disclosure:__
+```
+$ python wascan.py --url http://xxxxx.com/ --scan 4
+```
+![screen_5](https://raw.githubusercontent.com/m4ll0k/WAScan/master/screen/screen_6.png)
+
+__Full Scan:__
+```
+$ python wascan.py --url http://xxxxx.com --scan 5 
+```
+![screen_5](https://raw.githubusercontent.com/m4ll0k/WAScan/master/screen/screen_7.png)
+
+__Bruteforce Hidden Parameters:__
+```
+$ python wascan.py --url http://xxxxx.com/test.php --brute
+```
+![screen_5](https://raw.githubusercontent.com/m4ll0k/WAScan/master/screen/screen_8.png)
