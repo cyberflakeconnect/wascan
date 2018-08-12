@@ -8,7 +8,7 @@
 
 from re import search,I
 
-def apachesling(headers,content):
+def apachejackrabbit(headers,content):
 	_ = False
 	_ |= search(r"<\w[^>]*(=\"\/_jcr_content\/){1}[^>]*\>",content) is not None	
-	if _ : return "Apache Sling + Apache Felix OSGi container + Apache Jackrabbit/Adobe CRX repository + Java"
+	if _ : return "Apache Jackrabbit/Adobe CRX repository"

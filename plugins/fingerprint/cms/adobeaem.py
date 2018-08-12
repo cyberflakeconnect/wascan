@@ -13,4 +13,5 @@ def adobeaem(headers,content):
 	_ |= search(r"<link[^>]*stylesheet[^>]*etc\/designs\/[^>]*\>[^<]*",content) is not None
 	_ |= search(r"<link[^>]*etc\/clientlibs\/[^>]*\>[^<]*",content) is not None
 	_ |= search(r"<script[^>]*etc\/clientlibs\/[^>]*\>[^<]*",content) is not None
-	if _ : return "Adobe AEM"
+	_ |= search(r"<script[^>]*\/granite\/[^>]*(\.js\")+\>[^<]*",content) is not None
+	if _ : return "Adobe AEM: Stack is based on Apache Sling + Apache Felix OSGi container + JCR Repo + Java"
