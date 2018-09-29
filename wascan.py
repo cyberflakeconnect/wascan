@@ -74,7 +74,7 @@ class wascan(object):
 			if opt in ('-r','--ragent'):kwargs['agent'] = ragent()
 			if opt in ('-p','--proxy'):kwargs['proxy'] = arg 
 			if opt in ('-P','--proxy-auth'):kwargs['pauth'] = CAuth(arg) 
-			if opt in ('-t','--timeout'):kwargs['timeout'] = arg 
+			if opt in ('-t','--timeout'):kwargs['timeout'] = float(arg) 
 			if opt in ('-n','--redirect'):kwargs['redirect'] = False
 			if opt in ('-v','--verbose'):verbose = True
 			if opt in ('-V','--version'):version = Version()
