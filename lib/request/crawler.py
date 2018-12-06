@@ -12,8 +12,11 @@ from lib.utils.unicode import *
 from urllib import unquote_plus
 from re import search,findall,I
 from lib.request.request import *
-from BeautifulSoup import BeautifulSoup
 from urlparse import urlsplit,urlunparse
+try:
+	from BeautifulSoup import BeautifulSoup
+except ImportError:
+	from bs4 import BeautifulSoup
 
 EXCLUDED_MEDIA_EXTENSIONS = (
     '.7z', '.aac', '.aiff', '.au', '.avi', '.bin', '.bmp', '.cab', '.dll', '.dmp', '.ear', '.exe', '.flv', '.gif',
