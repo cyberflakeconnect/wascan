@@ -5,7 +5,7 @@
 # @repo:    https://github.com/m4ll0k/Wascan
 # @author:  Momo Outaadi (M4ll0k)
 # @license: See the file 'LICENSE.txt
-
+import urllib
 from re import sub,I
 
 class preplace:
@@ -20,7 +20,7 @@ class preplace:
 		"""get"""
 		params = self.url.split("?")[1].split("&")
 		for param in params:
-			ppayload = param.replace(param.split("=")[1],self.payload)
+			ppayload = param.replace(param.split("=")[1],urllib.quote_plus(self.payload))
 			porignal = param.replace(ppayload.split("=")[1],param.split("=")[1])
 			self._params.append(sub(porignal,ppayload,self.url))
 
@@ -28,7 +28,7 @@ class preplace:
 		"""post"""
 		params = self.data.split("&")
 		for param in params:
-			ppayload = param.replace(param.split("=")[1],self.payload)
+			ppayload = param.replace(param.split("=")[1],urllib.quote_plus(self.payload))
 			porignal = param.replace(ppayload.split("=")[1],param.split("=")[1])
 			self._params.append(self.data.replace(porignal,ppayload))
 
@@ -54,7 +54,7 @@ class padd:
 		"""get"""
 		params = self.url.split("?")[1].split("&")
 		for param in params:
-			ppayload = param.replace(param.split("=")[1],param.split('=')[1]+self.payload)
+			ppayload = param.replace(param.split("=")[1],param.split('=')[1]+urllib.quote_plus(self.payload))
 			porignal = param.replace(ppayload.split("=")[1],param.split("=")[1])
 			self._params.append(sub(porignal,ppayload,self.url))
 
@@ -62,7 +62,7 @@ class padd:
 		"""post"""
 		params = self.data.split("&")
 		for param in params:
-			ppayload = param.replace(param.split("=")[1],param.split('=')[1]+self.payload)
+			ppayload = param.replace(param.split("=")[1],param.split('=')[1]+urllib.quote_plus(self.payload))
 			porignal = param.replace(ppayload.split("=")[1],param.split("=")[1])
 			self._params.append(self.data.replace(porignal,ppayload))
 
