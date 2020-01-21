@@ -68,11 +68,12 @@ class ThreadBrute(Thread):
 					# and req.url == url
 					if CEndUrl(req.url) == url:
 						plus('A potential Backdoor was found at: {}'.format(req.url))
-				# done queue task
-				self.queue.task_done()
 			except Exception,e:
 				pass
 			except AttributeError,e:
 				pass
 			except TypeError,e:
 				pass
+			finally:
+				# done queue task
+				self.queue.task_done()
