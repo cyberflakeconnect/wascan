@@ -18,11 +18,13 @@ class preplace:
 
 	def get(self):
 		"""get"""
-		params = self.url.split("?")[1].split("&")
-		for param in params:
-			ppayload = param.replace(param.split("=")[1],urllib.quote_plus(self.payload))
-			porignal = param.replace(ppayload.split("=")[1],param.split("=")[1])
-			self._params.append(sub(porignal,ppayload,self.url))
+		url_params = self.url.split("?")[1].split("&")
+		for param in url_params:
+			params = param.split("=")
+			if len(params) > 1:
+				ppayload = param.replace(param.split("=")[1],urllib.quote_plus(self.payload))
+				porignal = param.replace(ppayload.split("=")[1],param.split("=")[1])
+				self._params.append(sub(porignal,ppayload,self.url))
 
 	def post(self):
 		"""post"""
@@ -52,11 +54,13 @@ class padd:
 
 	def get(self):
 		"""get"""
-		params = self.url.split("?")[1].split("&")
-		for param in params:
-			ppayload = param.replace(param.split("=")[1],param.split('=')[1]+urllib.quote_plus(self.payload))
-			porignal = param.replace(ppayload.split("=")[1],param.split("=")[1])
-			self._params.append(sub(porignal,ppayload,self.url))
+		url_params = self.url.split("?")[1].split("&")
+		for param in url_params:
+			params = param.split("=")
+			if len(params) > 1:
+				ppayload = param.replace(params[1],params[1]+urllib.quote_plus(self.payload))
+				porignal = param.replace(ppayload.split("=")[1],params[1])
+				self._params.append(sub(porignal,ppayload,self.url))
 
 	def post(self):
 		"""post"""
