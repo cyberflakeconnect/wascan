@@ -34,7 +34,6 @@ class open_redirect(Request):
 			# check url path
 			url = CPath(self.url,'/')+urllib.quote_plus(path)
 			# send request
-			print url
 			req = self.Send(url=url,method=self.get)
 			# if status code == 200
 			if search(r'https\:\/\/[www\.]google.com',req.url) or search(r'\<title\>Google\<\/title\>',req.content):
