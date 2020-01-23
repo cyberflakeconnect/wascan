@@ -5,7 +5,7 @@
 # @repo:    https://github.com/m4ll0k/Wascan
 # @author:  Momo Outaadi (M4ll0k)
 # @license: See the file 'LICENSE.txt'
-
+import urllib
 from os import path
 from re import search
 from lib.utils.check import *
@@ -32,8 +32,8 @@ class open_redirect(Request):
 		info('Checking Open Redirect..')
 		for path in readfile(self.search()):
 			# check url path
-			url = CPath(self.url,'/')+path
-			# send request 
+			url = CPath(self.url,'/')+urllib.quote_plus(path)
+			# send request
 			req = self.Send(url=url,method=self.get)
 			# if status code == 200
 			if search(r'https\:\/\/[www\.]google.com',req.url) or search(r'\<title\>Google\<\/title\>',req.content):

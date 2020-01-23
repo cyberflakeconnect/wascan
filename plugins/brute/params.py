@@ -66,11 +66,12 @@ class ThreadBrute(Thread):
 				if req_2.code in range(200,399):
 					if len(req_1.content) != len(req_2.content):
 						more('[{}] [{}]'.format(req_2.code,CParams(req_2.url)))
-				# done queue task
-				self.queue.task_done()
 			except Exception,e:
 				pass
 			except AttributeError,e:
 				pass
 			except TypeError,e:
 				pass
+			finally:
+				# done queue task
+				self.queue.task_done()
